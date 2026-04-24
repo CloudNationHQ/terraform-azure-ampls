@@ -122,5 +122,4 @@ MIT Licensed. See [LICENSE](./LICENSE) for full details.
 ## References
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/private-link-security)
-- [Rest Api](https://learn.microsoft.com/en-us/rest/api/monitor/private-link-scopes)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/insights/resource-manager/Microsoft.Insights/preview/2021-07-01-preview)
+- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/monitor/resource-manager/Microsoft.Insights)
