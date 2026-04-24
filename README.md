@@ -44,13 +44,13 @@ Type:
 
 ```hcl
 object({
-    name                  = string
-    resource_group_name   = optional(string, null)
+    name                  = optional(string)
+    resource_group_name   = optional(string)
     ingestion_access_mode = optional(string, "Open")
     query_access_mode     = optional(string, "Open")
     tags                  = optional(map(string))
     scoped_services = optional(map(object({
-      name               = optional(string, null)
+      name               = optional(string)
       linked_resource_id = string
     })), {})
   })
@@ -122,5 +122,4 @@ MIT Licensed. See [LICENSE](./LICENSE) for full details.
 ## References
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/private-link-security)
-- [Rest Api](https://learn.microsoft.com/en-us/rest/api/monitor/private-link-scopes)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/insights/resource-manager/Microsoft.Insights/preview/2021-07-01-preview)
+- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/monitor/resource-manager/Microsoft.Insights)
