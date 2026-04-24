@@ -44,13 +44,13 @@ Type:
 
 ```hcl
 object({
-    name                  = string
-    resource_group_name   = optional(string, null)
+    name                  = optional(string)
+    resource_group_name   = optional(string)
     ingestion_access_mode = optional(string, "Open")
     query_access_mode     = optional(string, "Open")
     tags                  = optional(map(string))
     scoped_services = optional(map(object({
-      name               = optional(string, null)
+      name               = optional(string)
       linked_resource_id = string
     })), {})
   })
