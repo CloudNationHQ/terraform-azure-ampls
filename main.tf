@@ -1,8 +1,6 @@
 # private link scope
 resource "azurerm_monitor_private_link_scope" "this" {
-  name = coalesce(
-    var.config.name, try(var.naming.monitor_private_link_scope, null)
-  )
+  name = var.config.name
 
   resource_group_name = coalesce(
     lookup(var.config, "resource_group_name", null),

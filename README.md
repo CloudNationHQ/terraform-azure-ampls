@@ -10,8 +10,6 @@ Enables linking multiple scoped services (Log Analytics workspaces, Application 
 
 Utilization of terratest for robust validation.
 
-Offers three-tier naming hierarchy (explicit, convention-based, or key-based) for flexible resource management.
-
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -61,14 +59,6 @@ object({
 ## Optional Inputs
 
 The following input variables are optional (have default values):
-
-### <a name="input_naming"></a> [naming](#input\_naming)
-
-Description: contains naming convention
-
-Type: `map(string)`
-
-Default: `{}`
 
 ### <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)
 
