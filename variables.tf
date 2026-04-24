@@ -1,13 +1,13 @@
 variable "config" {
   description = "contains all monitor private link scope configuration"
   type = object({
-    name                  = optional(string, null)
-    resource_group_name   = optional(string, null)
+    name                  = optional(string)
+    resource_group_name   = optional(string)
     ingestion_access_mode = optional(string, "Open")
     query_access_mode     = optional(string, "Open")
     tags                  = optional(map(string))
     scoped_services = optional(map(object({
-      name               = optional(string, null)
+      name               = optional(string)
       linked_resource_id = string
     })), {})
   })
@@ -26,12 +26,6 @@ variable "config" {
     condition     = contains(["Open", "PrivateOnly"], var.config.query_access_mode)
     error_message = "query_access_mode must be either 'Open' or 'PrivateOnly'."
   }
-}
-
-variable "naming" {
-  description = "contains naming convention"
-  type        = map(string)
-  default     = {}
 }
 
 variable "resource_group_name" {
