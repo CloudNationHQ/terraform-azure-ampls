@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-ampls/compare/v1.0.0...v1.1.0) (2026-05-07)
+
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#5](https://github.com/CloudNationHQ/terraform-azure-ampls/issues/5)) ([3f4cd8d](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/3f4cd8de3785256db9ec80c8d093247c0ba4da31))
+
 ## 1.0.0 (2026-04-24)
 
 
