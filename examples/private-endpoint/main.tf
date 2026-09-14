@@ -1,13 +1,13 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.26"
+  version = "~> 0.32"
 
   suffix = ["demo", "dev"]
 }
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
@@ -19,9 +19,8 @@ module "rg" {
 
 module "network" {
   source  = "cloudnationhq/vnet/azure"
-  version = "~> 9.0"
+  version = "~> 10.0"
 
-  naming = local.naming
 
   vnet = {
     name                = module.naming.virtual_network.name
@@ -40,7 +39,7 @@ module "network" {
 
 module "analytics" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 3.0"
+  version = "~> 4.0"
 
   workspace = {
     name                = module.naming.log_analytics_workspace.name_unique
@@ -51,9 +50,9 @@ module "analytics" {
 
 module "ampls" {
   source  = "cloudnationhq/ampls/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
-  config = {
+  monitor_private_link_scope = {
     name                = module.naming.monitor_private_link_scope.name_unique
     resource_group_name = module.rg.groups.demo.name
     scoped_services = {
@@ -66,7 +65,7 @@ module "ampls" {
 
 module "private_dns" {
   source  = "cloudnationhq/pdns/azure"
-  version = "~> 4.0"
+  version = "~> 5.0"
 
   resource_group_name = module.rg.groups.demo.name
 
@@ -75,7 +74,7 @@ module "private_dns" {
 
 module "privatelink" {
   source  = "cloudnationhq/pe/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   depends_on = [module.ampls]
 
@@ -98,7 +97,7 @@ module "privatelink" {
       }
 
       private_service_connection = {
-        private_connection_resource_id = module.ampls.config.id
+        private_connection_resource_id = module.ampls.monitor_private_link_scope.id
         subresource_names              = ["azuremonitor"]
       }
     }
