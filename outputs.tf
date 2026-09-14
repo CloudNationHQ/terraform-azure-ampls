@@ -1,4 +1,4 @@
-output "config" {
+output "monitor_private_link_scope" {
   description = "contains all monitor private link scope configuration"
   value       = azurerm_monitor_private_link_scope.this
 }
