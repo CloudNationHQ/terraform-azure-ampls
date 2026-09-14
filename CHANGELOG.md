@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-ampls/compare/v1.0.0...v2.0.0) (2026-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* this change causes recreates
+
+### Features
+
+* azurerm provider 5 upgrade ([ece5314](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/ece531467b72facd2eb1059185b229e37e29f1bc))
+* azurerm provider 5 upgrade ([96664f7](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/96664f7633941ce02af426e5204a3446ae074f7e))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#5](https://github.com/CloudNationHQ/terraform-azure-ampls/issues/5)) ([3f4cd8d](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/3f4cd8de3785256db9ec80c8d093247c0ba4da31))
+* **deps:** bump golang.org/x/crypto from 0.45.0 to 0.52.0 in /tests ([#7](https://github.com/CloudNationHQ/terraform-azure-ampls/issues/7)) ([fbd8db6](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/fbd8db600f79bb3b8f4e95f1d087f98bcc24cd02))
+
 ## 1.0.0 (2026-04-24)
 
 
