@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-ampls/compare/v2.0.0...v2.1.0) (2026-10-20)
+
+
+### Features
+
+* **deps:** bump github.com/klauspost/compress in /tests ([#10](https://github.com/CloudNationHQ/terraform-azure-ampls/issues/10)) ([92cf089](https://github.com/CloudNationHQ/terraform-azure-ampls/commit/92cf089ebb74e94e5b9bc51ae727389714bce2d7))
+
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-ampls/compare/v1.0.0...v2.0.0) (2026-09-14)
 
 
